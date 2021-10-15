@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 
 const Document = require("./models/document");
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/hastebin", {
+mongoose.connect("mongodb+srv://cluster0.gux8w.mongodb.net/hastebin", {
   useUnifiedTopology: true,
   useNewUrlParser: true,
 });
