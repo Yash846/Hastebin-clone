@@ -12,12 +12,7 @@ const Document = require("./models/document");
 const mongoose = require("mongoose");
 mongoose.connect(
   "mongodb+srv://yash:Ysaw@333@cluster0.gux8w.mongodb.net/hastebin?retryWrites=true&w=majority" ||
-    "mongodb://localhost/hastebin",
-  {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-  }
+    "mongodb://localhost/hastebin"
 );
 
 app.get("/", (req, res) => {
