@@ -5,6 +5,8 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
+const PORT = process.env.PORT || 3000;
+
 const Document = require("./models/document");
 const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost/hastebin", {
@@ -56,4 +58,4 @@ app.get("/:id", async (req, res) => {
   }
 });
 
-app.listen(3000);
+app.listen(PORT);
