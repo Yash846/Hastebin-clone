@@ -13,10 +13,17 @@ const mongoose = require("mongoose");
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/hastebin");
 
 app.get("/", (req, res) => {
-  const code = `Welcome to Hastebin!
+  const code = `Welcome to Hastebin Clone!
 
 Use the commands in the top right corner 
-to create a new file to share with others.`;
+to create a new file to share with others.
+
+To make a new entry, click "New"
+
+Type what you want to share, click "Save", and then copy the URL.
+Send that URL to someone and they'll see what you see.
+
+Hastebin clone built by Yash Sawlani`;
 
   res.render("code-display", { code, language: "plaintext" });
 });
