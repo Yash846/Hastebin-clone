@@ -33,7 +33,6 @@ app.post("/save", async (req, res) => {
   } catch (e) {
     res.render("new", { value });
   }
-  console.log(value);
 });
 
 app.get("/:id/duplicate", async (req, res) => {
