@@ -10,10 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 const Document = require("./models/document");
 const mongoose = require("mongoose");
-mongoose.connect(
-  "mongodb+srv://yash:Ysaw@333@cluster0.gux8w.mongodb.net/hastebin?retryWrites=true&w=majority" ||
-    "mongodb://localhost/hastebin"
-);
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/hastebin");
 
 app.get("/", (req, res) => {
   const code = `Welcome to Hastebin!
